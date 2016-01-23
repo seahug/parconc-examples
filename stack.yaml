@@ -1,0 +1,16 @@
+resolver: lts-5.11
+
+packages:
+- ./
+
+extra-deps:
+- HTTP-4000.3.3
+- network-2.5.0.0
+- distributed-process-simplelocalnet-0.2.3.2
+- normaldistribution-1.1.0.3
+
+flags:
+  parconc-examples:
+    accelerate: false
+  HTTP:
+    network-uri: false
