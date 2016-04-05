@@ -1,7 +1,7 @@
 name:                parconc-examples
 version:             0.3.5
 synopsis:            Examples to accompany the book "Parallel and Concurrent Programming in Haskell"
--- description:         
+-- description:
 license:             BSD3
 license-file:        LICENSE
 author:              Simon Marlow
@@ -193,6 +193,7 @@ executable kmeans
 executable GenSamples
   hs-source-dirs: kmeans
   main-is: GenSamples.hs
+  other-modules: KMeansCore
   build-depends:   base >= 4.5 && < 4.9
                  , binary >=0.6.3 && < 0.8
                  , array >= 0.4 && <0.6
@@ -302,6 +303,8 @@ executable  parinfer
                  , deepseq >= 1.3 && < 1.5
                  , monad-par >= 0.3.4 && < 0.4
                  , array >= 0.4 && <0.6
+  build-tools:     alex
+                 , happy
   default-language: Haskell2010
 
 -- -----------------------------------------------------------------------------
@@ -570,16 +573,20 @@ executable  windowman
                  , containers >= 0.4 && < 0.6
                  , stm ==2.4.*
   default-language: Haskell2010
+  -- Non-buildable due to no main function
+  buildable: False
 
 executable  tmvar
   main-is: tmvar.hs
   build-depends:   base >= 4.5 && < 4.9
                  , stm ==2.4.*
   default-language: Haskell2010
+  -- Non-buildable due to no main function
+  buildable: False
 
 executable  geturlsfirst
   main-is: geturlsfirst.hs
-  other-modules: ConcurrentUtils
+  other-modules: ConcurrentUtils, GetURL
   build-depends:   base >= 4.5 && < 4.9
                  , stm ==2.4.*
                  , bytestring >= 0.9 && < 0.11
@@ -599,25 +606,31 @@ executable  TList
   build-depends:   base >= 4.5 && < 4.9
                  , stm ==2.4.*
   default-language: Haskell2010
+  -- Non-buildable due to no main function
+  buildable: False
 
 executable  TQueue
   main-is: TQueue.hs
   build-depends:   base >= 4.5 && < 4.9
                  , stm ==2.4.*
   default-language: Haskell2010
+  -- Non-buildable due to no main function
+  buildable: False
 
 executable  TBQueue
   main-is: TBQueue.hs
   build-depends:   base >= 4.5 && < 4.9
                  , stm ==2.4.*
   default-language: Haskell2010
+  -- Non-buildable due to no main function
+  buildable: False
 
 -- -----------------------------------------------------------------------------
 -- conc-higher
 
 executable  geturls7
   main-is: geturls7.hs
-  other-modules: ConcurrentUtils
+  other-modules: ConcurrentUtils, GetURL
   build-depends:   base >= 4.5 && < 4.9
                  , stm ==2.4.*
                  , bytestring >= 0.9 && < 0.11
@@ -628,6 +641,7 @@ executable  geturls7
 
 executable  geturls8
   main-is: geturls8.hs
+  other-modules: Async, GetURL
   build-depends:   base >= 4.5 && < 4.9
                  , stm ==2.4.*
                  , bytestring >= 0.9 && < 0.11
@@ -638,6 +652,7 @@ executable  geturls8
 
 executable  geturls9
   main-is: geturls9.hs
+  other-modules: Async, GetURL
   build-depends:   base >= 4.5 && < 4.9
                  , stm ==2.4.*
                  , bytestring >= 0.9 && < 0.11
@@ -835,6 +850,7 @@ executable ping-tc-notify
 
 executable ping-fail
   main-is: distrib-ping/ping-fail.hs
+  other-modules: DistribUtils
   build-depends:   base >= 4.5 && < 4.9
                  , network >= 2.3 && < 2.5
                  , binary >=0.6.3 && < 0.8
@@ -995,9 +1011,10 @@ executable  Async
   build-depends:   base >= 4.5 && < 4.9
                  , stm ==2.4.*
   default-language: Haskell2010
+  -- Non-buildable due to no main function
+  buildable: False
 
 -- ToDo:
 --   euler35
 --   index
 --   sudoku-par{1,2,3,4,5}
-
