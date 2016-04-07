@@ -5,7 +5,7 @@ packages:
 
 extra-deps:
 - HTTP-4000.3.3
-- network-2.5.0.0
+- network-2.6.2.1
 - distributed-process-simplelocalnet-0.2.3.2
 - normaldistribution-1.1.0.3
 
@@ -13,4 +13,4 @@ flags:
   parconc-examples:
     accelerate: false
   HTTP:
-    network-uri: false
+    network-uri: true
