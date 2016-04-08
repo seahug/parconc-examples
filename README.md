@@ -74,7 +74,7 @@ git clone https://github.com/seahug/parconc-examples.git
 We then ask stack to set up an appropriate version of GHC:
 
 ```
-cd pcph/
+cd parconc-examples/
 stack setup
 ```
 
