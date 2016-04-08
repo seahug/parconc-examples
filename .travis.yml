@@ -21,12 +21,12 @@ matrix:
 # - in install we install (haskell) dependencies
 before_install:
  - unset CC
- - export PATH=$HOME/.local/bin:/opt/ghc/$GHCVER/bin:$PATH;;
+ - export PATH=$HOME/.local/bin:/opt/ghc/$GHCVER/bin:$PATH
  - ./.travis-setup.sh
 
 install:
  - echo "$(ghc --version) [$(ghc --print-project-git-commit-id 2> /dev/null || echo '?')]"
- - stack --no-terminal test --only-dependencies;;
+ - stack --no-terminal test --only-dependencies
 
 script:
- - stack --no-terminal build;;
+ - stack --no-terminal build
