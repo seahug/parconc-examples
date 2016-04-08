@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/seahug/parconc-examples.svg?branch=master)](https://travis-ci.org/seahug/parconc-examples)
-[![Windows build status](https://ci.appveyor.com/api/projects/status/u03m4qeqmfudxyli?svg=true)](https://ci.appveyor.com/mgsloan/parconc-examples)
+[![Linux/OS X build status](https://img.shields.io/travis/seahug/parconc-examples/master.svg?label=Linux%2FOS%20X)](https://travis-ci.org/seahug/parconc-examples)
+[![Windows build status](https://img.shields.io/appveyor/ci/mgsloan/parconc-examples/master.svg?label=Windows)](https://ci.appveyor.com/project/mgsloan/parconc-examples/branch/master)
 
 # SeaHUG "Parallel and concurrent programming in Haskell" materials
 
