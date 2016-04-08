@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/seahug/parconc-examples.svg?branch=master)](https://travis-ci.org/seahug/parconc-examples)
+[![Windows build status](https://ci.appveyor.com/api/projects/status/u03m4qeqmfudxyli?svg=true)](https://ci.appveyor.com/mgsloan/parconc-examples)
+
 # SeaHUG "Parallel and concurrent programming in Haskell" materials
 
 ## About the book
