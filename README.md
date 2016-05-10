@@ -135,7 +135,9 @@ parmonad 4 5`.
 
 # License
 
-Released under MIT License
+* Released under BSD3 License
+* Code samples, copyright &copy; Simon Marlow 2011-2013
+* Other material, copyright &copy; Richard Cook and Michael Sloan 2016
 
 [book]: http://chimera.labs.oreilly.com/books/1230000000929
 [cabal-install]: https://wiki.haskell.org/Cabal-Install
